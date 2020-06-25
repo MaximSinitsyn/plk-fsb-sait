@@ -1,0 +1,237 @@
+.licenses {
+    &__item + &__item {
+        margin-top: $offset_h;
+    }
+}
+
+.license {
+    position: relative;
+    justify-content: center;
+
+    @include media-query(hg) {
+        height: 700px;
+        justify-content: flex-start;
+    }
+
+    &__image-wrapper {
+        width: 100%;
+        max-width: 450px;
+
+        @include media-query(hg) {
+            position: absolute;
+            left: $offset_l;
+            top: 0;
+            height: 100%;
+            width: auto;
+            max-width: initial;
+        }
+    }
+
+    &_reverse &__image-wrapper {
+        left: auto;
+        right: $offset_l;
+    }
+    
+    &__image {
+        width: 100%;
+        height: auto;
+
+        @include media-query(hg) {
+            width: auto;
+            height: 100%;
+        }
+    }
+
+    &__text-block-wrapper {
+        height: 100%;
+        display: flex;
+        margin: 0 $offset_s;
+        align-items: center;
+        padding-top: 63px;
+        text-align: center;
+
+        @include media-query(hg) {
+            padding-top: 0;
+            padding-left: 560px;
+            margin: 0 $offset_s;
+            text-align: left;
+        }
+    }
+
+    &_reverse &__text-block-wrapper {
+        @include media-query(hg) {
+            padding-left: 0;
+            padding-right: 560px;
+            text-align: right;
+        }
+    }
+
+    &__text-block {
+        flex-direction: column;
+
+        @include media-query(hg) {
+            padding-left: $offset_m;
+        }
+    }
+
+    &_reverse &__text-block {
+        @include media-query(hg) {
+            padding-left: 0;
+            padding-right: $offset_m;
+            text-align: right;
+        }
+    }
+
+    &__title {
+        font-size: $xs-title_m;
+        line-height: $xs-line-height_m;
+        font-weight: bold;
+        color: $black;
+
+        @include media-query(md) {
+            font-size: $title_m;
+            line-height: $line-height_m;
+        }
+    }
+
+    &__description  {
+        font-size: $font_l;
+        line-height: $line-height_s;
+        font-weight: 200;
+        color: $black;
+        padding-top: $offset_m;
+
+        &_smallOffset {
+            padding-top: $offset_s;
+        }
+    }
+
+    &__component {
+        font-size: $font_l;
+        font-weight: bold;
+        line-height: $line-height_s;
+        padding-top: $offset_m;
+        position: relative;
+    }
+
+    &__link {
+        border-bottom: 1px dashed $balanced;
+        color: $balanced;
+        transition: 300ms 0ms linear;
+
+        &:hover {
+            color: $positive;
+            border-color: $positive;
+        }
+    }
+
+    &__link + &__link {
+        margin-left: $offset_s;
+    }
+
+    &__list {
+        padding-top: $offset_m;
+    }
+
+    &__item {
+        @include media-query(hg) {
+            border-left: 3px solid $positive;
+            padding-left: $offset_s;
+        }
+    }
+
+    &_reverse &__item {
+        @include media-query(hg) {
+            border-left: 0;
+            padding-left: 0;
+            border-right: 3px solid $positive;
+            padding-right: $offset_s;
+        }
+    }
+
+    &__item + &__item {
+        margin-top: $offset_s;
+    }
+
+    &__item-title {
+        font-size: $font_l;
+        font-weight: 200;
+    }
+
+    &__item-description {
+        font-size: $font_h;
+        font-weight: bold;
+    }
+
+    &__proposal-block {
+        display: flex;
+        padding-top: $offset_l;
+        flex-direction: column;
+        align-items: center;
+
+        @include media-query(hg) {
+            flex-direction: row;
+        }
+    }
+
+    &_reverse &__proposal-block {
+        @include media-query(hg) {
+            flex-direction: row-reverse;
+        }
+    }
+
+    // &__btn {}
+
+    &__proposal {
+        display: flex;
+        flex-direction: column;
+        padding-top: $offset_m;
+
+        @include media-query(hg) {
+            padding-top: 0;
+            padding-left: $offset_s;
+        }
+    }
+
+    &_reverse &__proposal {
+        @include media-query(hg) {
+            text-align: right;
+            padding-left: 0;
+            padding-right: $offset_s;
+        }
+    }
+
+    &__discount {
+        font-size: $title_s;
+        line-height: $line-height_m;
+        font-weight: bold;
+    }
+
+    &__period {
+        font-size: $font_m;
+        font-weight: 200;
+    }
+}
+
+.license-modal {
+    &__description {
+        font-size: $font_l;
+        font-weight: 200;
+        line-height: $line-height_s;
+        border-left: 5px solid $positive;
+        padding-left: $size;
+    }
+
+    &__description + &__description,
+    &__description + &__text-title {
+        margin-top: $offset_s;
+    }
+
+    &__description-title {
+        font-weight: bold;
+    }
+
+    &__description-list {
+        margin-top: $offset_s;
+    }
+}

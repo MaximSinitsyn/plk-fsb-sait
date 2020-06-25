@@ -1,0 +1,28 @@
+<div class="about">
+    <div class="about__row row">
+        <div class="about__block white-block white-block_big xs-12 lg-6">
+            <div class="about__items">
+                <div class="about__title">
+                    {{ __scope.title }}
+                </div>
+                <div class="about__description">
+                    {{ __scope.description | raw }}
+                </div>
+            </div>
+        </div>
+        <div class="about__block-wrapper xs-12 lg-6">
+            <div class="about__block about__block_big">
+                {% for item in __scope.items %}
+                <div class="about__items">
+                    <div class="about__trigger-title">
+                        {{ item.title }}
+                    </div>
+                    <div class="about__trigger-description">
+                        {{ item.description }}
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>

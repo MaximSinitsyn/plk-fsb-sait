@@ -1,0 +1,37 @@
+<div class="row form-block">
+    <div class="col xs-12 lg-6 form-block__item">
+        <div class="form-block__text white-block white-block_transparent">
+            <div class="form-block__title">
+                {{ __scope.question_title }}
+            </div>
+            <div class="form-block__description">
+                {{ __scope.question_description }}
+            </div>
+            <div class="form-block__btn">
+                <button class="btn btn_solid btn_colored btn_big"
+                        data-modal='{"name": "formConsultation", "id": "form"}'
+                        onclick="yaCounter48293609.reachGoal('get_consultation'); return true;">
+                    {{ btn.consultation }}
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="col xs-12 lg-6 xs-center form-block__item">
+        <div class="form-block__white white-block white-block_medium">
+            <div class="form-block__text">
+                <div class="form-block__title form-block__title_form">
+                    {{ __scope.form_title }}
+                </div>
+                <div class="form-block__sale">
+                    {{ __root.sale.title }}
+                </div>
+                <div class="form-block__period">
+                    {{ __root.sale.text }}
+                </div>
+            </div>
+            <div class="form-block__form">
+                {% include "components/form.twig" with {"__class": "formDefault", "__formName": "Заявка"} %}
+            </div>
+        </div>       
+    </div>
+</div>

@@ -1,0 +1,103 @@
+.offer {
+    //  &__image-wrapper {}
+
+    &__mobile-overlay {
+        background: linear-gradient(to top, transparent, rgba(255, 255, 255, 0.5) 70%);
+        width: 100%;
+        height: 150%;
+        position: absolute;
+        left: 0;
+        top: 0;
+
+        @include media-query(hg) {
+            display: none;
+        }
+    }
+
+    &__col {
+        padding: 5px;
+
+        &_btn {
+            flex-direction: column;
+            align-items: center;
+
+            @include media-query(hg) {
+                flex-direction: row;
+            }
+        }
+    }
+
+    &__row {
+        position: relative;
+
+        &_title {
+            margin-top: $offset_s;
+
+            @include media-query(md) {
+                margin-top: $offset_m;
+            }
+        }
+
+        &_description {
+            margin-top: $offset_m;
+        }
+
+        &_btn {
+            margin-top: $offset_s;
+
+            @include media-query(md) {
+                margin-top: 105px;
+            }
+        }
+    }
+
+    &__image {
+        position: absolute;
+        top: 0;
+        right: -30%;
+        height: 80%;
+
+        @include media-query(sm) {
+            right: -30%;
+            height: 100%;
+        }
+
+        @include media-query(md) {
+            left: auto;
+            top: 15%;
+            right: -20%;
+            height: 100%;
+        }
+    }
+
+    &__proposal {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-top: $offset_m;
+
+        @include media-query(hg) {
+            margin-left: $size;
+            margin-top: 0;
+        }
+    }
+
+    &__discount {
+        color: $black;
+        font-size: $xs-title_m;
+        text-transform: uppercase;
+        font-weight: bold;
+        line-height: $xs-line-height_m;
+
+        @include media-query(md) {
+            font-size: $title_m;
+            line-height: 50px;
+        }
+    }
+
+    &__period {
+        font-size: $font_h;
+        color: $black;
+        font-weight: 200;
+    }
+}

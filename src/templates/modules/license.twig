@@ -1,0 +1,108 @@
+{% if __mod != undefined %}
+    {% set __class = "license_" ~ __mod %}
+{% endif %}
+
+<div class="row license {{ __class }}">
+    <div class="license__image-wrapper white-block white-block_clear">
+        {% include "utils/image.twig" with {"__scope": __scope.image, "__class": "license__image"} %}
+    </div>
+    <div class="license__text-block-wrapper">
+        <div class="license__text-block">
+            <div class="license__title">
+                {{ __scope.title }}
+            </div>
+            <div class="license__description">
+                {{ __scope.description }}
+            </div>
+            <div class="license__description license__description_smallOffset">
+                {% if __scope.doc_1 != undefined %}
+                    {{ __scope.doc_1.text }}
+                    <a class="link" href="{{ __scope.doc_1.link }}">{{ __scope.doc_1.link_text }}</a>
+                {% endif %}
+                {% if __scope.doc_2 != undefined %}
+                    {{ __scope.doc_2.text }}
+                    <a class="link" href="{{ __scope.doc_2.link }}">{{ __scope.doc_2.link_text }}</a>
+                {% endif %}
+            </div>
+            <div class="license__component" >
+                <a class="license__link" href="#" data-modal='{"name": "modal-{{ __scope.anchor }}-steps", "id": "form"}'>
+                    {{ __scope.link_steps.name }}
+                </a>
+
+                <a class="license__link" href="#" data-modal='{"name": "modal-{{ __scope.anchor }}", "id": "form"}'>
+                    {{ __scope.link.name }}
+                </a>
+            </div>
+            <div class="license__list">
+                {% for item in __scope.items %}
+                    <div class="license__item">
+                        <div class="license__item-title">
+                            {{ item.title }}
+                        </div>
+                        <div class="license__item-description">
+                            {{ item.description }}
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+            <div class="license__proposal-block">
+                <button class="btn license__btn"
+                        data-modal='{"name": "formDefault", "id": "form"}'
+                        onclick="yaCounter48293609.reachGoal('get_license'); return true;">
+                    {{ btn.default }}
+                </button>
+                <div class="license__proposal">
+                    <span class="license__discount">{{ __root.sale.title }}</span>
+                    <span class="license__period">{{ __root.sale.text }}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="modal-{{ __scope.anchor }}" class="modal modalCloseOverlay">
+    <div class="modal__container">
+        <img class="modal__close" src="./icon/cancel.svg">
+        <div class="modal__head">
+            <p class="bold bold_balanced">{{ __scope.title|raw }}</p>
+            <p>{{ __scope.link.name|raw }}</p>
+        </div>
+        <div class="modal__body">
+            <div class="license-modal">
+                {% for item in __scope.stages %}
+                    <div class="license-modal__description">
+                        {{ item.title|raw }}
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="modal-{{ __scope.anchor }}-steps" class="modal modalCloseOverlay">
+    <div class="modal__container">
+        <img class="modal__close" src="./icon/cancel.svg">
+        <div class="modal__head">
+            {#<p class="bold bold_balanced">{{ __scope.title }}</p>#}
+            <p>{{ __scope.link_steps.name|raw }}</p>
+        </div>
+        <div class="modal__body">
+            <div class="license-modal">
+                {% for item in __scope.steps %}
+                    <div class="license-modal__description">
+                        <div class="license-modal__description-title">
+                            {{ item.title|raw }}
+                        </div>
+                        <ul class="license-modal__description-list">
+                            {% for step in item.list %}
+                                <li class="license-modal__description-item">
+                                    {{ step.text|raw }}
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>

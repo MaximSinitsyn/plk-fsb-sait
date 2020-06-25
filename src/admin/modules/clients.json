@@ -1,0 +1,94 @@
+{
+    "title": {
+        "data": "Наши клиенты"
+    },
+    "items": {
+        "data": [
+            {
+                "base": "./images/clients/",
+                "file": "technoserv.jpg",
+                "alt": "Техносерв"
+            },
+            {
+                "base": "./images/clients/",
+                "file": "sinigeriya.jpg",
+                "alt": "Синигерия"
+            },
+            {
+                "base": "./images/clients/",
+                "file": "ofd.jpg",
+                "alt": "ОФД"
+            },
+            {
+                "base": "./images/clients/",
+                "file": "krok.jpg",
+                "alt": "Крок"
+            },
+            {
+                "base": "./images/clients/",
+                "file": "kabest.jpg",
+                "alt": "Кабест"
+            },
+            {
+                "base": "./images/clients/",
+                "file": "ib.jpg",
+                "alt": "IB"
+            },
+            {
+                "base": "./images/clients/",
+                "file": "honeywell.jpg",
+                "alt": "Honeywell"
+            },
+            {
+                "base": "./images/clients/",
+                "file": "evotor.jpg",
+                "alt": "Эвотор"
+            },
+            {
+                "base": "./images/clients/",
+                "file": "atol.jpg",
+                "alt": "Атол"
+            },
+            {
+                "base": "./images/clients/",
+                "file": "asteros.jpg",
+                "alt": "Астерос"
+            },
+            {
+                "base": "./images/clients/",
+                "file": "amt.jpg",
+                "alt": "AMT Group"
+            },
+            {
+                "base": "./images/clients/",
+                "file": "asia.jpg",
+                "alt": "Азия Инвест Банк"
+            },
+            {
+                "base": "./images/clients/",
+                "file": "comparex.jpg",
+                "alt": "Comparex"
+            },
+            {
+                "base": "./images/clients/",
+                "file": "diasoft.jpg",
+                "alt": "DIASOFT"
+            },
+            {
+                "base": "./images/clients/",
+                "file": "ffin.jpg",
+                "alt": "Freedom finance"
+            },
+            {
+                "base": "./images/clients/",
+                "file": "osgrecords.jpg",
+                "alt": "OSG Records managment"
+            },
+            {
+                "base": "./images/clients/",
+                "file": "tecon.jpg",
+                "alt": "Текон"
+            }
+        ]
+    }
+}

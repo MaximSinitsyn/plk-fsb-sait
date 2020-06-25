@@ -1,0 +1,22 @@
+<div class="row trust">
+    <div class="trust__text-block-wrapper">
+        <div class="trust__text-block">
+            <div class="trust__title">
+                {{ __scope.title }}
+            </div>
+            <div class="trust__discription">
+                {{ __scope.discription | raw }}
+            </div>
+            <div class="trust__images">
+                {% for item in __scope.images %}
+                    <div class="trust__image-wrapper">
+                        <img class="trust__image" src="{{ item.src }}5x@{{ item.file }}">
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    <div class="trust__slider-wrapper">
+        {% include "utils/image.twig" with {"__scope": __scope.image, "__class": "trust__slide"} %}
+    </div>
+</div>

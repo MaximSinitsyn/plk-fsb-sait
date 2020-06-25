@@ -1,0 +1,79 @@
+{
+    "image": {
+        "data": {
+            "base": "./images/comments/",
+            "file": "comment_1.jpg",
+            "alt": "Отзывы"
+        }
+    },
+    "title": {
+        "data": "Нам доверяют"
+    },
+    "discription": {
+        "data": "Более <b class='lighter lighter_balanced'>1500 лицензий</b> получено нами за 2017 год"
+    },
+    "images": {
+        "data": [
+            {
+                "src": "./images/clients/",
+                "file": "client_1.jpg"
+            },
+            {
+                "src": "./images/clients/",
+                "file": "client_1.jpg"
+            },
+            {
+                "src": "./images/clients/",
+                "file": "client_1.jpg"
+            },
+            {
+                "src": "./images/clients/",
+                "file": "client_1.jpg"
+            },
+            {
+                "src": "./images/clients/",
+                "file": "client_1.jpg"
+            },
+            {
+                "src": "./images/clients/",
+                "file": "client_1.jpg"
+            },
+            {
+                "src": "./images/clients/",
+                "file": "client_1.jpg"
+            },
+            {
+                "src": "./images/clients/",
+                "file": "client_1.jpg"
+            },
+            {
+                "src": "./images/clients/",
+                "file": "client_1.jpg"
+            },
+            {
+                "src": "./images/clients/",
+                "file": "client_1.jpg"
+            },
+            {
+                "src": "./images/clients/",
+                "file": "client_1.jpg"
+            },
+            {
+                "src": "./images/clients/",
+                "file": "client_1.jpg"
+            },
+            {
+                "src": "./images/clients/",
+                "file": "client_1.jpg"
+            },
+            {
+                "src": "./images/clients/",
+                "file": "client_1.jpg"
+            },
+            {
+                "src": "./images/clients/",
+                "file": "client_1.jpg"
+            }
+        ]
+    }
+}

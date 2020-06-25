@@ -1,0 +1,85 @@
+{
+  "__root": {
+    "title": {
+      "data": "Гарантированное <b class='bold bold_balanced'>оформление лицензии</b> ФСБ и ФСТЭК",
+      "type": "text"
+    },
+    "page_title": {
+      "data": "Гарантированное оформление лицензии ФСБ и ФСТЭК",
+      "type": "text"
+    },
+    "phone": {
+      "data": {
+        "code": "8 495",
+        "number": "150-70-26"
+      }
+    },
+    "sale": {
+      "data": {
+        "title": "Скидка 30%",
+        "text": "Действительна до конца Апреля"
+      }
+    },
+    "favicon": {
+      "data": {
+        "path": "./favicon/",
+        "png": "fav_64.png",
+        "iso": "fav.ico",
+        "ios": ["57", "72", "114", "144", "180"]
+      },
+      "admin": false
+    }
+  },
+  "__modules": {
+    "about": {
+      "json": "modules/about.json"
+    },  
+    "btn": {
+      "json": "modules/btn.json"
+    },
+    "menu": {
+      "json": "modules/menu.json"
+    },
+    "offer_price": {
+      "json": "modules/offer_price.json"
+    },
+    "licenses": {
+      "data": [
+        {
+          "json": "modules/cryptography.json"
+        },
+        {
+          "json": "modules/secret.json"
+        },
+        {
+          "json": "modules/tzki.json"
+        },
+        {
+          "json": "modules/szki.json"
+        }
+      ]
+    },
+    "answer": {
+      "json": "modules/answer.json"
+    },
+    "clients": {
+      "json": "modules/clients.json"
+    },
+    "trust": {
+      "json": "modules/trust.json"
+    },
+    "form_block": {
+      "json": "modules/form_block.json"
+    },
+    "contact": {
+      "json": "modules/contact.json"
+    }
+  },
+  "__scripts": [
+    {
+      "data": "<script type=\"text/javascript\" charset=\"utf-8\" src=\"https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A0e4b5e5667824401ca8bff95ab7a31f6fb83aaec32560f20f478ff5eb359efe0&id=map\"></script>",
+      "type": "textarea",
+      "admin": "true"
+    }
+  ]
+}

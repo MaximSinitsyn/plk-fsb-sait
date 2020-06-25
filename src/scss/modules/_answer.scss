@@ -1,0 +1,129 @@
+.answer {
+    &__row {
+        display: flex;
+        position: relative;
+    }
+
+    &__block {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        @include media-query(lg) {
+            min-height: 400px;
+        }
+    }
+
+    &__box {
+        position: relative;
+        z-index: 1;
+    }
+
+    &__img-wrapper {
+        position: absolute;
+        z-index: 0;
+        height: 100%;
+        left: -63px;
+        top: 0;
+        max-height: 650px;
+        display: none;
+
+        &_right {
+            left: auto;
+            right: -63px;
+        }
+
+        @include media-query(lg) {
+            display: block;
+        }
+    }
+
+    &__img {
+        height: 100%;
+    }
+
+    &__text {
+        @include media-query(lg) {
+            min-height: 650px;
+        }
+    }
+
+    &__title {
+        line-height: $xs-line-height;
+        font-size: $xs-title_s;
+        font-weight: bold;
+        padding-bottom: $offset_s;
+        margin-bottom: $offset_s;
+        border-bottom: 1px dashed $light-dark;
+
+        @include media-query(md) {
+            line-height: $line-height_m;
+            font-size: $title_s;
+        }
+    }
+
+    &__description {
+        margin-top: $offset_m;
+        padding: 0 $offset_m;
+        line-height: $line-height_m;
+        font-size: $font_m;
+        text-align: justify;
+    }
+
+    &__titleQuestion {
+        font-size: $font_l;
+        font-weight: bold;
+
+        @include media-query(md) {
+            font-size: $font_h;
+        }
+    }
+
+    &__question {
+        text-align: left;
+        display: flex;
+        justify-content: center;
+    }
+
+    &__question-list {
+        width: 100%;
+        margin: $offset_s 0;
+    }
+
+    &__question-item + &__question-item {
+        margin-top: $size_s;
+    }
+
+    &__btn {
+        margin-top: $offset_m;
+    }
+}
+
+.answer-form {
+    &__title {
+        color: $black;
+        font-size: $xs-title_s;
+        line-height: $xs-line-height;
+        font-weight: bold;
+        text-transform: uppercase;
+
+        @include media-query(md) {
+            font-size: $title_m;
+            line-height: $line-height_m;
+        }
+    }
+
+    &__sale {
+        margin-top: $offset_s;
+        font-size: $xs-title_s;
+        line-height: $xs-line-height;
+        font-weight: 300;
+        margin-bottom: $offset_s;
+        color: $balanced;
+
+        @include media-query(md) {
+            font-size: $title_s;
+            line-height: $line-height_m;
+        }
+    }
+}

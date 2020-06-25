@@ -1,0 +1,145 @@
+<div class="answer">
+    <div class="answer__row row xs-center">
+        <div class="answer__img-wrapper">
+            {% include 'utils/image.twig' with {'__scope': {"base": "./images/","file": "woman.png"}, '__class': "answer__img"} %}
+        </div>
+        <div class="answer__box xs-12 lg-7 xs-center">
+            <div class="answer__text white-block white-block_medium JSinteractive"
+                 id="JSinteractive">
+                <div class="answer__title JSinteractive__title">
+                    {{ __scope.title }}
+                </div>
+                {% for item in __scope.interactive %}
+                    <div class="answer__block JSinteractive__{{ item.order }} JSinteractive__{{ item.id }} {{ item.order == 1 ? 'JSinteractive__current' : '' }}"
+                         id="JSinteractive__{{ item.id }}"
+                         style="{{ item.order > 1 ? 'display: none' : '' }}">
+                        <div class="answer__titleQuestion">
+                            {{ item.title|replace({'\\': ''})|raw }}
+                        </div>
+                        <div class="answer__interactive">
+                            <div class="answer__question">
+                                <ul class="JSinteractive__list answer__question-list">
+                                    {% for question in item.questions %}
+                                        <li class="answer__question-item">
+                                            <label class="label">
+                                                <input class="label__input label__input_{{ item.type }}"
+                                                       type="{{ item.type }}"
+                                                       name="question_{{ item.order }}"
+                                                       value="{{ question.value }}"
+                                                       data-question='{
+                                                            "id": "{{ item.id }}",
+                                                            "order": "{{ item.order }}",
+                                                            "type": "{{ item.type }}",
+                                                            "title": "{{ item.title }}",
+                                                            "value": "{{ question.value }}",
+                                                            "target": "{{ question.target }}",
+                                                            "qID": "{{ question.id }}"
+                                                       }'>
+                                                <span class="label__text">
+                                                    {{ question.value|raw }}
+                                                </span>
+                                            </label>
+                                        </li>
+                                    {% endfor %}
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="answer__buttons row">
+                            <div class="col xs-12 md-6 xs-center"
+                                 style="{{ item.order < 2 ? 'display: none' : '' }}">
+                                <button class="btn btn_small btn_solid btn_colored"
+                                        data-step='{
+                                            "step": "{{ item.order - 1 }}",
+                                            "state": "{{ item.id }}",
+                                            "type": "back"
+                                        }'>
+                                    Предыдущий вопрос
+                                </button>
+                            </div>
+                            <div class="col xs-center {{ item.order > 1 ? 'xs-12 md-6' : 'xs-12' }}">
+                                <button class="btn btn_small JSinteractive__step"
+                                        data-step='{
+                                            "step": "{{ item.order + 1 }}",
+                                            "state": "{{ item.id }}",
+                                            "type": "next",
+                                            "stateType": "{{ item.type }}",
+                                            "target": "{{ item.target }}"
+                                        }'>
+                                    Следующий вопрос
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+
+                <div class="answer__block JSinteractive__sendForm"
+                     id="JSinteractive__sendForm"
+                     style="display: none">
+
+                    <div class="answer-form">
+                        <div class="answer-form__title">
+                            {{ __scope.form.title }}
+                        </div>
+                        <div class="answer-form__sale">
+                            {{ __scope.form.sale }}
+                        </div>
+                        <div class="answer-form__form">
+                            {% include "components/form.twig" with {"__class": "formInteractive", "__formName": "Заявка с вопросами"} %}
+                        </div>
+                    </div>
+                </div>
+
+                {#<div class="answer__title">
+                    <h2 class="JSinteractive__title">
+                        {{ __scope.title }}
+                    </h2>
+                </div>
+                <div class="answer__interactive">
+                    <div class="answer__question">
+                        <ul class="JSinteractive__list">
+                            <li>
+                                <label>
+                                    <input type="radio" name="question_1" value="q_1_val_1" style="-webkit-appearance: radio;">
+                                    <span>
+                                        q_1_val_1
+                                    </span>
+                                </label>
+                            </li>
+                            <li>
+                                <label>
+                                    <input type="radio" name="question_1" value="q_1_val_2" style="-webkit-appearance: radio;">
+                                    <span>
+                                        q_1_val_2
+                                    </span>
+                                </label>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="answer__buttons row">
+                        <div class="col col-xs-4">
+                            <button class="btn btn_small btn_solid btn_colored">
+                                Предыдущий вопрос
+                            </button>
+                        </div>
+                        <div class="col col-xs-4">
+                            <button class="btn btn_small">
+                                Следующий вопрос
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="answer__description">
+                    {{ __scope.description }}
+                </div>
+                <div class="answer__btn">
+                    <button class="btn" data-modal='{"name": "formDefault", "id": "form"}'>
+                        {{ btn.default }}
+                    </button>
+                </div>#}
+            </div>
+        </div>
+        <div class="answer__img-wrapper answer__img-wrapper_right">
+            {% include 'utils/image.twig' with {'__scope': {"base": "./images/","file": "man.png"}, '__class': "answer__img"} %}
+        </div>
+    </div>
+</div>

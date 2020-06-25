@@ -1,0 +1,41 @@
+/// @example html - Модификаторы _medium и _big задают внутренний отступ, по умолчанию _small
+
+.white-block {
+    background: $white;
+    box-shadow: 0 0 40px 0 rgba(0, 0, 0, 0.1);
+    padding: $offset_s;
+    width: 100%;
+
+    @include media-query(md) {
+        padding: $offset_m;
+    }
+
+    &_transparent {
+        background: none;
+        box-shadow: none;
+    }
+
+    &_medium {
+        padding: $offset_s;
+
+        @include media-query(md) {
+            padding: $offset_l;
+        }
+    }
+
+    &_big {
+        padding: $offset_s;
+
+        @include media-query(sm) {
+            padding: $offset_m;
+        }
+
+        @include media-query(md) {
+            padding: $offset_h;
+        }
+    }
+
+    &_clear {
+        padding: 0;
+    }
+}

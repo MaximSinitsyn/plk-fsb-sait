@@ -1,0 +1,59 @@
+/// Класс выделения жирным .bold по умолчанию черного цвета
+/// Класс выделения тонким .lighter по умолчанию черного цвета
+/// Модификатор _balanced и _light изменяют цвет
+
+.bold {
+    color: $black;
+    font-weight: bold;
+
+    &_assertive {
+        color: $assertive;
+    }
+
+    &_stable {
+        color: $stable;
+    }
+
+    &_balanced {
+        color: $balanced;
+    }
+
+    &_light {
+        color: $white;
+    }
+}
+
+.selection {
+    min-width: 20px;
+    display: inline-block;
+    text-align: center;
+    padding: 0 3px;
+
+    &_assertive {
+        background: $assertive;
+        color: $white;
+    }
+
+    &_stable {
+        background: $stable;
+        color: $white;
+    }
+
+    &_balanced {
+        background: $balanced;
+        color: $white;
+    }
+}
+
+.lighter {
+    color: $black;
+    font-weight: 200;
+
+    &_balanced {
+        color: $balanced;
+    }
+
+    &_light {
+        color: $white;
+    }
+}

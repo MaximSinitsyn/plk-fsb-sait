@@ -1,0 +1,11 @@
+.block {
+    position: relative;
+}
+
+.block + .block {
+    margin-top: #{$size * 2};
+
+    @include media-query(md) {
+        margin-top: #{$size * 6};
+    }
+}

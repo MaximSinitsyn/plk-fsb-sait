@@ -1,0 +1,22 @@
+{
+    "items": {
+        "data": {
+            "cryptography": {
+                "name": "ФСБ криптография",
+                "link": "crypto"
+            },
+            "secret": {
+                "name": "ФСБ гостайна",
+                "link": "gos"
+            },
+            "tzki": {
+                "name": "ФСТЭК по ТЗКИ",
+                "link": "fstek"
+            },
+            "szki": {
+                "name": "ФСБ и ФСТЭК по СЗКИ",
+                "link": "fsbfstek"
+            }
+        }
+    }
+}

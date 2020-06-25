@@ -1,0 +1,28 @@
+.clients {
+    &__container {
+        flex-direction: column;
+    }
+
+    &__row-title {
+        margin-bottom: $offset_m;
+
+        @include media-query(lg) {
+            margin-bottom: $offset_l;
+        }
+    }
+
+    &__title {
+        line-height: $xs-line-height_m;
+        font-size: $xs-title_m;
+        text-transform: uppercase;
+
+        @include media-query(lg) {
+            line-height: $line-height_m;
+            font-size: $title_m;
+        }
+    }
+
+    &__image {
+        max-width: 200px;
+    }
+}

@@ -1,0 +1,11 @@
+<div class="licenses">
+    {% for item in __scope %}
+        <div class="licenses__item" id="{{ item.anchor }}">
+            {% if loop.index%2 %}
+                {% include "modules/license.twig" with {"__scope":item} %}
+            {% else %}
+                {% include "modules/license.twig" with {"__scope":item, "__mod": "reverse"} %}
+            {% endif %}
+        </div>
+    {% endfor %}
+</div>

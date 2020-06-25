@@ -1,0 +1,63 @@
+.trust {
+    position: relative;
+    height: 650px;
+
+    &__text-block-wrapper {
+        height: 100%;
+        display: flex;
+        margin: 0 $offset_s;
+        padding-right: 560px;
+    }
+
+    &__text-block {
+        flex-direction: column;
+        padding-left: $offset_m;
+    }
+
+    &__title {
+        font-size: $title_l;
+        font-weight: bold;
+        line-height: $line-height_l;
+        color: $black;
+        padding-top: $offset_m;
+    }
+
+    &__discription {
+        font-size: $title_s;
+        line-height: $line-height_m;
+        font-weight: 200;
+        color: $black;
+        padding-top: $offset_m;
+    }
+
+    &__images {
+        display: flex;
+        flex-wrap: wrap;
+        margin: calc(-#{$size} / 2);
+        padding-top: $offset_m;
+    }
+
+    &__image-wrapper {
+        padding: calc(#{$size} / 2);
+        width: 33.333333%;
+        height: auto;
+    }
+
+    &__image {
+        width: 100%;
+    }
+
+    &__slider-wrapper {
+        position: absolute;
+        right: $offset_l;
+        top: 0;
+        height: 100%;
+        width: auto;
+    }
+    
+    &__slide {
+        width: auto;
+        height: 100%;
+        box-shadow: 0 0 40px 0 rgba(0, 0, 0, 0.15);
+    }
+}

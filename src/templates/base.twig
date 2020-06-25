@@ -1,0 +1,28 @@
+{% include "components/header_scroll.twig" %}
+
+<div class="block">
+    {% include "components/offer.twig" %}
+</div>
+<div class="block">
+    {% include "modules/answer.twig" with {"__scope":answer} %}
+</div>
+<div class="block" id="licenses">
+    {% include "modules/licenses.twig" with {"__scope":licenses} %}
+</div>
+<div class="block">
+    {% include "modules/about.twig" with {"__scope":about} %}
+</div>
+<!--div class="block">
+    {# include "modules/trust.twig" with {"__scope":trust} #}
+</div-->
+<div class="block" id="clients">
+    {% include "modules/clients.twig" with {"__scope":clients} %}
+</div>
+<div class="block">
+    {% include "modules/form-block.twig" with {"__scope":form_block} %}
+</div>
+<div class="block">
+    {% include "modules/contact.twig" with {"__scope":contact} %}
+</div>
+
+{% include "components/footer.twig" %}
